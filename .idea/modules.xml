@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DemoDigit.iml" filepath="$PROJECT_DIR$/DemoDigit.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/digit/digit.iml" filepath="$PROJECT_DIR$/digit/digit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tab-digit.iml" filepath="$PROJECT_DIR$/tab-digit.iml" />
     </modules>
   </component>
 </project>

@@ -15,9 +15,9 @@ import com.xenione.digit.TabDigit;
  */
 public class CountdownView extends LinearLayout implements Runnable {
 
-    private static final char[] SEXAGISIMAL = new char[]{'5', '4', '3', '2', '1', '0'};
+    private static final String[] SEXAGISIMAL = new String[]{"5", "4", "3", "2", "1", "0"};
 
-    private static final char[] DECIMAL = new char[]{'9', '8', '7', '6', '5', '4', '3', '2', '1', '0'};
+    private static final String[] DECIMAL = new String[]{"9", "8", "7", "6", "5", "4", "3", "2", "1", "0"};
 
     private TabDigit mCharHighSecond;
     private TabDigit mCharLowSecond;

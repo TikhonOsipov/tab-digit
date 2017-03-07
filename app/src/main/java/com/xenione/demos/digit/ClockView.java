@@ -17,9 +17,9 @@ import java.util.Calendar;
  */
 public class ClockView extends LinearLayout implements Runnable{
 
-    private static final char[] HOURS = new char[]{'0', '1', '2'};
+    private static final String[] HOURS = new String[]{"0", "1", "2"};
 
-    private static final char[] SEXAGISIMAL = new char[]{'0', '1', '2', '3', '4', '5'};
+    private static final String[] SEXAGISIMAL = new String[]{"0", "1", "2", "3", "4", "5"};
 
     private TabDigit mCharHighSecond;
     private TabDigit mCharLowSecond;

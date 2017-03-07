@@ -55,7 +55,7 @@ public class TabDigit extends View implements Runnable {
 
     private int mPadding = 0;
 
-    private char[] mChars = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    private String[] mChars = new String[]{"00", "01", "02", "03", "04", "05", "06", "07", "08", "09"};
 
     public TabDigit(Context context) {
         this(context, null);
@@ -222,7 +222,7 @@ public class TabDigit extends View implements Runnable {
     }
 
     private void calculateTextSize(Rect rect) {
-        mNumberPaint.getTextBounds("8", 0, 1, rect);
+        mNumberPaint.getTextBounds("88", 0, 2, rect);
     }
 
     public void setTextSize(int size) {
@@ -245,11 +245,11 @@ public class TabDigit extends View implements Runnable {
      *
      * @param chars
      */
-    public void setChars(char[] chars) {
+    public void setChars(String[] chars) {
         mChars = chars;
     }
 
-    public char[]  getChars() {
+    public String[]  getChars() {
         return mChars;
     }
 
@@ -338,18 +338,18 @@ public class TabDigit extends View implements Runnable {
 
     private void nextBottomTab(){
         mBottomTab.next();
-        state = MIDDLE_POSITION;
+        state = UPPER_POSITION;
     }
 
     private void nextMiddleTab() {
         mMiddleTab.next();
-        state = UPPER_POSITION;
+        state = LOWER_POSITION;
     }
 
     private void nextTopTab() {
         mTopTab.next();
         mTime = -1;
-        state = LOWER_POSITION;
+        state = MIDDLE_POSITION;
     }
 
     public void sync() {
@@ -458,7 +458,7 @@ public class TabDigit extends View implements Runnable {
             }
             applyTransformation(canvas, mModelViewMatrix);
             canvas.clipRect(clip);
-            canvas.drawText(Character.toString(mChars[mCurrIndex]), 0, 1, -mTextMeasured.centerX(), -mTextMeasured.centerY(), mNumberPaint);
+            canvas.drawText(mChars[mCurrIndex], 0, 2, -mTextMeasured.centerX(), -mTextMeasured.centerY(), mNumberPaint);
             canvas.restore();
         }
 
